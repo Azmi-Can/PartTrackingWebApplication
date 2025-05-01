@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_LayoutYonetici.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="mb-3">
+        <h3>@ViewBag.personel.personelAdSoyad İşleri</h3>
+    </div>
+    @foreach (var i in ViewBag.isler)
+    {
+        <div class="card">
+            <div class="card-header bg-black tex-center text-white">
+                @i.parcaIsmi
+            </div>
+            <div class="card-body">
+                <ul class="list-group" list-group-flush>
+                    <li class="list-group-item">@i.parcaDurumu</li>
+                    <li class="list-group-item">İletilen Tarih : @i.iletilenTarih.ToString("dd MMMM yyyy hh:mm")</li>
+                    <li class="list-group-item">Yapılan Tarih :@(i.yapilanTarih != null ? i.yapilanTarih.ToString("dd MMMM yyyy hh:mm") : "Henüz Girilmedi") </li>
+                    <li class="list-group-item">Parca Durum : @i.Durumlar.durumAd</li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+
