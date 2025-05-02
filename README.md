@@ -14,7 +14,7 @@ Yönetici görevi --> parça atama, iş listeleme, takip yapabilmektedir.
 
 ![image](https://github.com/user-attachments/assets/1b0e1e87-9552-48b2-9f60-8487cc6d98ef)
 
-İş ata tıklayınca alttaki ekran gelmektedir ve burada bize bağlı olan kişleri seçerek parça ismi, açıklamsı yazılarak DB de buunan 
+İş ata tıklayınca alttaki ekran gelmektedir ve burada yöneticiye bağlı olan kişleri seçerek parça ismi, açıklaması yazılarak DB de bulunan 
 parçalar table güncellenmektedir. (entity.Parcalar.Add(yeniParca) entity.SaveChanges())
 ![image](https://github.com/user-attachments/assets/66d4a025-46a6-4df7-9062-869ca8d85b16)
 
@@ -26,7 +26,7 @@ Parça takip'e basınca görevlendirdiğimiz kişiler çıkıyor ve işleri lise
 Çalışan kullanıcı adıyla giriş yapınca, alttaki ekran gelmektedir.
 ![image](https://github.com/user-attachments/assets/d5569bd2-75df-4eec-80f9-67ef2d8208ff)
 
-iş tamamla tıkladıktan sonra şuanda iş durumu 1 (yapılıyor) olanları göstermetedir.Tamamla tuşunu basılırsa iş durumu 2 (yapıldı)
+iş tamamla tıkladıktan sonra şuanda iş durumu 1 (yapılıyor) olanları göstermektedir.Tamamla tuşunu basılırsa iş durumu 2 (yapıldı)
 ![image](https://github.com/user-attachments/assets/289cb342-5f9a-4c4c-80ab-fe19060df0ef)
 
 iş takip basılırsa eğer şuana kadar üzerindeki işleri datetimenow sıralanır.
