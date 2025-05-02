@@ -1,4 +1,4 @@
-Asp.net core webb app projem. Projemi ilk size anlattığım gibi düşündüm fakat akışında değişiklik yapma kararı aldım.
+Boş bir **MVC** şablonu oluşturdum ve db bağlantısını entity data model EF designer ile bağlantısını yaptım. 
 
 * Farklı table'lar oluşturarak, __id iler ilişkilendirdim. Personeller(yönetici, calisan tipinde iki calışan bulunmaktadır)
 Yönetici görevi --> parça atama, iş listeleme, takip yapabilmektedir.
