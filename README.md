@@ -34,5 +34,22 @@ iş takip basılırsa eğer şuana kadar üzerindeki işleri datetimenow sırala
 ![image](https://github.com/user-attachments/assets/6a417171-c322-406f-8152-6173932a3da5)
 
 
+Son güncelleme ile Admin Sayfası oluşturuldu.
+
+![image](https://github.com/user-attachments/assets/5af349c4-d9c0-4fa3-9711-16f010376621)
+
+Kişi Atama sayfasındaki boşluklar ve Select'ler seçilerek form doldurulu. Yeni kişi db aktarılır.
+![image](https://github.com/user-attachments/assets/d95e2c6a-d129-429f-877d-4d87e51ed3ed)
+
+Kişi Sil sayfasında ise seçilen birim ve kullanıcı seçilir.
+![image](https://github.com/user-attachments/assets/d1d4a257-abaa-4d37-8f6c-ef6b39a2f31e)
+
+Eğer kullanıcı ve birim uyuşmazsa hata vermektedir.
+![image](https://github.com/user-attachments/assets/93ea74de-62fb-46e2-bd7b-84d90ee8dffd)
+
+Doğru kullanıcı ve birim seçilirse, db'den kişi kaldırılır.
+
+
+
 
 
