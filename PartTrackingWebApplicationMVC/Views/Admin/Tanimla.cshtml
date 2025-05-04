@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Tanimla";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            @ViewBag.birimAd birimi için Kişi Tanımlama İşlemi
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("Tanimla", "Admin", FormMethod.Post))
+            {
+                <div class="mb-3">
+                    <label for="personelAdSoyad" class="form-label">Personel Ad Soyad Giriniz</label>
+                    <input type="text" class="form-control" id="personelAdSoyad" name="personelAdSoyad" />
+                </div>
+                <div class="mb-3">
+                    <label for="personelKullaniciAd" class="form-label">Personel Kullanici Adı Giriniz</label>
+                    <input type="text" class="form-control" id="personelKullaniciAd" name="personelKullaniciAd" />
+                </div>
+                <div class="mb-3">
+                    <label for="personelParola" class="form-label">Personel Parolasını Giriniz</label>
+                    <input type="text" class="form-control" id="personelParola" name="personelParola" />
+                </div>
+                <div class="mb-3">
+                    <label for="personelBirimId" class="form-label">Birim Seçiniz</label>
+                    <select class="form-select" name="personelBirimId" id="personelBirimId">
+                        @foreach (var birim in ViewBag.birimler)
+                        {
+                            <option value="@birim.birimId">@birim.birimAd</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="personelYetki" class="form-label">Yetki Seçiniz</label>
+                    <select class="form-select" name="personelYetki" id="personelYetki">
+                        @foreach (var yetki in ViewBag.yetkiler)
+                        {
+                            <option value="@yetki.yetkiTurId">@yetki.yetkiTurAd</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-primary">Kişi Tanımla</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

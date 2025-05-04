@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            @ViewBag.birimAd birimi için Kişi Silme İşlemi
+        </div>
+
+        <div class="card-body">
+            @using (Html.BeginForm("Delete", "Admin", FormMethod.Post))
+            {
+                <div class="mb-3">
+                    <label for="birimId" class="form-label">Birim Seçiniz</label>
+                    <select class="form-select" name="birimId" id="birimId">
+                        @foreach (var birim in ViewBag.birimler)
+                        {
+                            <option value="@birim.birimId">@birim.birimAd</option>
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="personelSecimi" class="form-label">Personel Seçiniz</label>
+                    <select class="form-select" name="personelSecimi" id="personelSecimi">
+                        @foreach (var personel in ViewBag.personeller)
+                        {
+                            <option value="@personel.personelBirimId-@personel.personelId">@personel.personelAdSoyad</option>
+
+                        }
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-primary">Kişi Sil</button>
+                </div>
+                <br /> <br />
+                if (ViewBag.mesaj != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @ViewBag.mesaj
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

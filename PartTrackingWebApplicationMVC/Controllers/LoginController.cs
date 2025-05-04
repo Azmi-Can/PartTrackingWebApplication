@@ -41,6 +41,8 @@ namespace PartTrackingWebApplicationMVC.Controllers
                         return RedirectToAction("Index", "Yonetici");
                     case 2:
                         return RedirectToAction("Index", "Calisan");
+                    case 1002:
+                        return RedirectToAction("Index", "Admin");
                     default:
                         return View();
                 }
